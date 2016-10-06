@@ -1,5 +1,5 @@
 <?php
- 
+
 /*
 NASTRAN 
 2016+
@@ -14,8 +14,9 @@ define( 'ROOT_PATH', './');
 
 require_once( ROOT_PATH.'classes/class_init.php');
 
-new autoLoad();
+$nastran = new autoLoad();
+$nastran->dbConnect();
 
-echo 'Nastran: Hello Muthafucka!';
+echo 'Nastran: My version: '.VERSION.'';
 
 ?>

@@ -5,7 +5,7 @@ NASTRAN
 2016+
 Pawel Janisio
 MIT License
- */
+*/
 
 //this sequence is added for the internal working script
 if(!defined('NASTRAN_FRONTEND'))
@@ -25,6 +25,21 @@ build statuses:
 - beta (if neccesary)
 - release
 */
+
+
+//Define debug state
+
+switch (DEBUG_PHP) {
+    case 0:
+        error_reporting(0);
+        break;
+    case 1:
+        error_reporting(E_ERROR | E_WARNING | E_PARSE);
+        break;
+    case 2:
+        error_reporting(E_ALL);
+        break;
+}
 
 //Redefined variables and functions
 
